@@ -2,10 +2,11 @@
 #
 # shinzui/macos ellipsis package
 
-# The following hooks can be defined to customize behavior of your package:
-# pkg.install() {
-#     fs.link_files $PKG_PATH
-# }
+pkg.install() {
+  ./configure_settings.sh
+  ./install_apps.sh
+  ./install_app_store_apps.sh
+}
 
 # pkg.push() {
 #     git.push
