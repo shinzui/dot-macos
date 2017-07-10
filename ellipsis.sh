@@ -2,6 +2,11 @@
 #
 # shinzui/macos ellipsis package
 
+pkg.link() {
+  #don't link any files
+  echo ""
+}
+
 pkg.install() {
   ./configure_settings.sh
   ./install_apps.sh
