@@ -9,6 +9,8 @@ readonly applications=(
   muzzle
   keybase
   selfcontrol
+  sourcetree
+  adobe-creative-cloud
 )
 
 install_app() {
@@ -23,3 +25,5 @@ install_app() {
 for app in "${applications[@]}"; do
   install_app "$app"
 done
+
+open '/usr/local/Caskroom/adobe-creative-cloud/latest/Creative Cloud Installer.app'
