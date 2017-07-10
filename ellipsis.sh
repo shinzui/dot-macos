@@ -11,6 +11,7 @@ pkg.install() {
   ./configure_settings.sh
   ./install_apps.sh
   ./install_app_store_apps.sh
+  ./configure_apps.sh
 }
 
 # pkg.push() {
