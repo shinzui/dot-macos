@@ -11,6 +11,7 @@ readonly applications=(
   selfcontrol
   sourcetree
   adobe-creative-cloud
+  transmission
 )
 
 install_app() {
