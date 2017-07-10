@@ -12,6 +12,8 @@ readonly applications=(
   sourcetree
   adobe-creative-cloud
   transmission
+  flycuts
+  pritunl
 )
 
 install_app() {
