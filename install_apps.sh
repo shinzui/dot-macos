@@ -8,6 +8,7 @@ readonly applications=(
   iterm2
   muzzle
   keybase
+  selfcontrol
 )
 
 install_app() {
