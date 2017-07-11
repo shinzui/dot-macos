@@ -4,7 +4,7 @@ printf "System - Expand save panel by default\n"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 printf "Keyboard - Set a fast keyboard repeat rate\n"
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 0.09
 
 
 printf "Trackpad - Map bottom right corner to right-click\n"
@@ -16,7 +16,7 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 printf "Bluetooth - Increase sound quality for headphones/headsets\n"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-
+#Dock
 printf "Dock - Remove all default app icons\n"
 defaults write com.apple.dock persistent-apps -array
 
@@ -28,7 +28,12 @@ defaults write com.apple.Dock autohide-delay -float 0
 
 printf "Dock - Disable auto rearrange spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false && \
+
+printf "Dock - Don't automatically switch to a Space with open windows for and application when switching to it"
+defaults write com.apple.dock workspaces-auto-swoosh -boolean NO
 killall Dock
+
+#Finder
 
 printf "Finder - Show hidden files\n"
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -39,7 +44,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 printf "Finder - Show status bar\n"
 defaults write com.apple.finder ShowStatusBar -bool true
 
-
+#Safari
 printf "Safari - Enable the Develop menu and the Web Inspector\n"
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
@@ -48,5 +53,7 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 printf "Safari - Add a context menu item for showing the Web Inspector in web views\n"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+
+#SSH
 printf "SSH -Enable remote login"
 sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
