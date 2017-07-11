@@ -14,6 +14,7 @@ readonly applications=(
   transmission
   flycuts
   pritunl
+  zoomus
 )
 
 install_app() {
