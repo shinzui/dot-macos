@@ -15,6 +15,7 @@ readonly applications=(
   flycut
   pritunl
   zoomus
+  medis
 )
 
 install_app() {
