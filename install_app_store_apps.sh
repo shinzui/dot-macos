@@ -13,3 +13,6 @@ mas install 441258766
 
 #Slack
 mas install 803453959
+
+#Annotate
+mas install 918207447
