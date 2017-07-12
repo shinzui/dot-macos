@@ -12,7 +12,7 @@ readonly applications=(
   sourcetree
   adobe-creative-cloud
   transmission
-  flycuts
+  flycut
   pritunl
   zoomus
 )
