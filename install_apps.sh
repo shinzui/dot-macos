@@ -16,6 +16,7 @@ readonly applications=(
   pritunl
   zoomus
   medis
+  duet
 )
 
 install_app() {
