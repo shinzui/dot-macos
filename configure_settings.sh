@@ -4,8 +4,8 @@ printf "System - Expand save panel by default\n"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 printf "Keyboard - Set a fast keyboard repeat rate\n"
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+#defaults write NSGlobalDomain KeyRepeat -int 10
+#defaults write NSGlobalDomain InitialKeyRepeat -int 100
 
 
 # printf "Trackpad - Map bottom right corner to right-click\n"  (BROKEN)
@@ -58,3 +58,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 #SSH
 printf "SSH -Enable remote login"
 sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+
+
+#Limits
+printf "Configuring limits"
+sudo cp ./limit.maxfiles.plist /Library/LaunchDaemons/ 
+sudo cp ./limit.maxprocs.plist /Library/LaunchDaemons/
