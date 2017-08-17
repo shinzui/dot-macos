@@ -17,6 +17,7 @@ readonly applications=(
   zoomus
   medis
   duet
+  itsycal
 )
 
 install_app() {
